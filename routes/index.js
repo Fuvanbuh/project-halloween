@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
-/*
+
 router.post('/signup', async (req, res, next) => {
 
   const {
@@ -28,12 +28,12 @@ router.post('/signup', async (req, res, next) => {
 
   //busco en la BD si existe el username
   User.findOne({
-    name: name
+    mail: mail
   })
     .then(user => {
       if (user !== null) {
-        res.render("auth/signup", {
-          errorMessage: "The name already exists!"
+        res.render("index", {
+          errorMessage: "The mail already exists!"
         });
         return;
       }
@@ -45,20 +45,13 @@ router.post('/signup', async (req, res, next) => {
   const userCreated = await User.create({
     name,
     mail,
-    password: hashPass,
+    city,
+    phone
   })
   req.session.currentUser = userCreated
-  res.redirect("/users/profile");
+  res.redirect("index");
 });
 
 
-router.get('/login', function (req, res, next) {
 
-  if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-    res.redirect("/users/secret");
-  }
-
-  res.render('auth/login');
-});
-
-module.exports = router;*/
+module.exports = router;
