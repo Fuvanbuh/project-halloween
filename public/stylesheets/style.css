@@ -5,14 +5,12 @@
 }
 
 body {
-  padding: 5vh 5vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url(../images/bgimg.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #FE8210;
   height: 100vh;
-  font-size: 28px;
 }
 
 h1{
@@ -22,7 +20,7 @@ h1{
 h2{
   font-size: 30px;
   text-align: center;
-  margin: 5vh 0 10vh;
+  margin: 5vh 0 5vh;
 }
 
 .body-div{
@@ -42,18 +40,19 @@ h2{
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 100%;
+  width: 20vw;
 }
 
 .div-form input{
   padding: 4px;
   margin: 3px 0;
+  border-radius: 5px;
   text-align: center;
 }
 
 .white{
-  background-color: rgba(240, 255, 255, 0.507);
-  padding: 5vh;
+  background-color: rgba(240, 255, 255, 0.150);
+  padding: 3vh;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -61,5 +60,36 @@ h2{
   align-items: center;
 }
 
+.div-form button{
+  border-radius: 10px;
+  border: none;
+  background-color: #FE8210;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 40%;
+}
 
+.white span {
+  font-weight: 100px;
+  font-size: x-large;
+}
+
+#public-info{
+  list-style:none;
+}
+
+.info h3{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.disapear{
+  background-image: url(../images/bgimg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
 
