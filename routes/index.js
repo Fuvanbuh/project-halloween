@@ -4,7 +4,15 @@ const User = require("../models/User");
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  console.log(req.session.currentUser)
+  if (!req.session.currentUser) {
+    console.log("there is no user")
+    res.render('index');
+  } else {
+    console.log("there is a user")
+    res.render("index", { secretInfo: "Secret Info" })
+  }
+
 });
 
 router.post('/signup', async (req, res, next) => {
@@ -44,7 +52,6 @@ router.post('/signup', async (req, res, next) => {
     phone
   })
   req.session.currentUser = userCreated
-  console.log("valid user")
   res.redirect("/");
 });
 
