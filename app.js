@@ -1,12 +1,26 @@
+require("dotenv").config();
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-//const mongoose = require("mongoose");
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+const hbs = require('hbs')
+
+mongoose
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true }) //cambiar el nombre del proyecto
+  .then(x => {
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+  })
+  .catch(err => {
+    console.error('Error connecting to mongo', err)
+  });
 
 const app = express();
 
