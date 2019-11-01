@@ -29,10 +29,7 @@ body div{
   padding: 20px ;
     
 }
-.div-form > label {
-  
-  
-}
+
 .div-form input{
   padding: 4px;
   margin: 3px 0;
@@ -41,6 +38,8 @@ body div{
 }
 .div-form button{
   border-radius: 10px;
+  width: 40%;
+  margin: 0 auto;
   
   border: none;
   background-color: #FE8210;
@@ -62,8 +61,6 @@ body div{
 
 #public-info{
   list-style:none;
-  
+
 }
-
-
 
