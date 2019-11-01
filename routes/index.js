@@ -7,7 +7,6 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
 router.post('/signup', async (req, res, next) => {
   console.log('estoy entrando')
   const {
@@ -18,6 +17,12 @@ router.post('/signup', async (req, res, next) => {
   } = req.body;
   // validamos si los valores de los inputs llegan vacíos
   if (name === "" || mail === "") {
+    res.render("index", {
+      errorMessage: "Indicate a name, mail and to register"
+    });
+    return;
+  }
+  else if (typeof (phone) !== Number) {
     res.render("index", {
       errorMessage: "Indicate a name, mail and to register"
     });
@@ -45,7 +50,8 @@ router.post('/signup', async (req, res, next) => {
     phone
   })
   req.session.currentUser = userCreated
-  res.redirect("index");
+  console.log("valid user")
+  res.redirect("/");
 });
 
 

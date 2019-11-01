@@ -32,6 +32,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: "basic-auth-secret",
+  cookie: { maxAge: 6000000 },
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60 * 1000 // 1 day
+  })
+}));
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
