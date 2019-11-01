@@ -25,15 +25,27 @@ body div{
   display: flex;
   flex-direction: column;
   text-align: center;
-  
+  width: 100%;
+  padding: 20px ;
+    
 }
 .div-form > label {
-  margin-top: 20px;
+  margin-top: 10px;
+  
 }
-a {
-  color: #00B7FF;
+.div-form input{
+  padding: 4px;
+  margin: 3px 0;
+  text-align: center;
 }
+
 
 .white{
   background-color: rgba(240, 255, 255, 0.507);
+  padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
+
+
+
