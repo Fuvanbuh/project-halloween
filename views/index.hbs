@@ -1,21 +1,36 @@
 <body>
-
-    <h1></h1>
-
-
-    <form id="form" action="/signup" method="POST">
-        <label for="name">NAME</label>
-        <input type="text" name="name" placeholder="Your name">
-        <label for="mail">EMAIL</label>
-        <input type="email" name="mail" placeholder="Your email">
-        <label for="city">CITY</label>
-        <input type="text" name="city" placeholder="City">
-        <label for="phone">PHONE</label>
-        <input type="text" name="phone" placeholder="Your Phone">
-        <button type="submit"> CREATE </button>
-        {{#if errorMessage}}
-        <div>{{ errorMessage }}</div>
-        {{/if}}
-    </form>
-
+    <div>
+        <h1>Scary Boo Inc</h1>
+        <h2>An ofer to die better...</h2>
+    </div>
+    <div class="cont-info">
+        <div>
+            <div>
+                <span>All night long</span>
+                <li> DJ Soni </li>
+                <li>DJ Javi</li>
+                <li>DJ Gerard</li>
+            </div>
+            <div>
+                <span>C/ Falsa Nº falso, Barcelona</span>
+                <span>00h - 5h 00</span>
+            </div>
+        </div>
+        <div>
+            <form class="div-form" id="form" action="/signup" method="POST">
+                <label for="name">NAME</label>
+                <input type="text" name="name" placeholder="Your name">
+                <label for="mail">EMAIL</label>
+                <input type="email" name="mail" placeholder="Your email">
+                <label for="city">CITY</label>
+                <input type="text" name="city" placeholder="City">
+                <label for="phone">PHONE</label>
+                <input type="text" name="phone" placeholder="Your Phone">
+                <button type="submit"> CREATE </button>
+                {{#if errorMessage}}
+                <div>{{ errorMessage }}</div>
+                {{/if}}
+            </form>
+        </div>
+    </div>
 </body>
