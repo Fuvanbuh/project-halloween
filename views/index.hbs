@@ -1,25 +1,30 @@
 <body>
-    <div>
-        <h1>Scary Boo Inc</h1>
-        <h2>An ofer to die better...</h2>
-    </div>
-    <div class="cont-info">
+    <img border='0' src='//lh5.ggpht.com/_qgZA1ny_dAs/TM2UGNH7ORI/AAAAAAAAEuc/yRvKD_gAIg8/spiders.gif'
+        style='position:fixed; top:0; left:0; color:black' />
+
+    <h1>Scary Boo presents: </h1>
+    <h2>An ofer to die better...</h2>
+    <div class="body-div">
         <div>
 
-            <div id="public-info" class="white">
-                <span>All night long</span>
-                <li>DJ Sonia </li>
-                <li>DJ Javi</li>
-                <li>DJ Gerard</li>
+            <div id="public-info" class="white info">
+                <h3>What you should know:</h3>
+                <p>some public info goes here</p>
             </div>
+
             {{#if secretInfo}}
-            <div class="white">
-                <span>{{secretInfo}}</span>
+
+            {{else}}
+            <div class="white info">
+                <h3>Where and when?</h3>
+                <p>Carrer de Dracula con Calle Embrujada,</p>
+                <p> Numero 666
+                    3 de Noviembre, 3:00am</p>
+                <img class="gif" src="/images/giphy.webp" alt="">
             </div>
             {{/if}}
-        </div>
-        <div class="container">
-            <svg id="svg"></svg>
+
+
         </div>
         <div class="white">
             <span>Register You!</span>
