@@ -30,19 +30,28 @@ body div{
     
 }
 .div-form > label {
-  margin-top: 10px;
+  
   
 }
 .div-form input{
   padding: 4px;
   margin: 3px 0;
+  border-radius: 5px;
   text-align: center;
+}
+.div-form button{
+  border-radius: 10px;
+  
+  border: none;
+  background-color: #FE8210;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 
 .white{
-  background-color: rgba(240, 255, 255, 0.507);
-  padding-bottom: 40px;
+  background-color: rgba(240, 255, 255, 0.150);
+    padding-bottom: 5px;
     padding-left: 40px;
     padding-right: 40px;
 }
