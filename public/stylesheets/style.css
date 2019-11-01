@@ -47,13 +47,22 @@ body div{
   padding: 5px;
   margin-top: 10px;
 }
-
+.white span {
+  padding-top: 10px;
+  font-weight: 100px;
+  font-size: x-large;
+}
 
 .white{
   background-color: rgba(240, 255, 255, 0.150);
     padding-bottom: 5px;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+#public-info{
+  list-style:none;
+  
 }
 
 
