@@ -1,2 +1,14 @@
-<h1>{{title}}</h1>
-<p>Welcome to scary-boo</p>
+<form id="form" action="/signup" method="POST">
+    <label for="name">NAME</label>
+    <input type="text" name="name" placeholder="Your name">
+    <label for="mail">EMAIL</label>
+    <input type="email" name="mail" placeholder="Your email">
+    <label for="city">CITY</label>
+    <input type="text" name="city" placeholder="City">
+    <label for="phone">PHONE</label>
+    <input type="text" name="phone" placeholder="Your Phone">
+    <button type="submit"> CREATE </button>
+    {{#if errorMessage}}
+    <div>{{ errorMessage }}</div>
+    {{/if}}
+</form>

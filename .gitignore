@@ -30,4 +30,8 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+<<<<<<< HEAD
 .env
+=======
+.env
+>>>>>>> 863114b63a33265625280227f38461e2743c134d
