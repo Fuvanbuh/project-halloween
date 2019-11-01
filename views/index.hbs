@@ -1,4 +1,7 @@
 <body>
+    <img border='0' src='//lh5.ggpht.com/_qgZA1ny_dAs/TM2UGNH7ORI/AAAAAAAAEuc/yRvKD_gAIg8/spiders.gif'
+        style='position:fixed; top:0; left:0; color:black' />
+
     <h1>Scary Boo presents: </h1>
     <h2>An ofer to die better...</h2>
     <div class="body-div">
@@ -9,18 +12,20 @@
                 <p>some public info goes here</p>
             </div>
 
+            {{#if secretInfo}}
 
+            {{else}}
             <div class="white info">
                 <h3>Where and when?</h3>
-                {{#if secretInfo}}
-                <p>{{secretInfo}}</p>
-                {{else}}
-                <p>Log in to get more details</p>
-                {{/if}}
-
+                <p>Carrer de Dracula con Calle Embrujada,</p>
+                <p> Numero 666
+                    3 de Noviembre, 3:00am</p>
+                <img class="gif" src="/images/giphy.webp" alt="">
             </div>
-        </div>
+            {{/if}}
 
+
+        </div>
         <div class="white">
             <span>Register You!</span>
             <form class="div-form" id="form" action="/signup" method="POST">
@@ -36,7 +41,9 @@
                 {{#if errorMessage}}
                 <div>{{ errorMessage }}</div>
                 {{/if}}
+
             </form>
         </div>
     </div>
+
 </body>

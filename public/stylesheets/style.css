@@ -77,6 +77,7 @@ h2{
 }
 
 #public-info{
+  padding: 20px 30px;
   list-style:none;
 }
 
@@ -92,6 +93,8 @@ h2{
   position: absolute;
   height: 99vh;
   width: 100%;
-  overflow: hidden;
-  animation: disapear1 3s steps(20) 3s forwards;
+}
+.gif{
+width: 90px;
+height: 140px;
 }
