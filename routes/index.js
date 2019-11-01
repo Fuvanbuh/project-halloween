@@ -22,12 +22,6 @@ router.post('/signup', async (req, res, next) => {
     });
     return;
   }
-  else if (typeof (phone) !== Number) {
-    res.render("index", {
-      errorMessage: "Indicate a name, mail and to register"
-    });
-    return;
-  }
   //busco en la BD si existe el username
   User.findOne({
     mail: mail

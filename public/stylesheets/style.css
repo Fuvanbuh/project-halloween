@@ -2,7 +2,11 @@ body {
   padding: 0;
   margin:0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
- 
+  background-image: url(../images/bgimg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #FE8210;
+  height: 100vh;
 }
 
 body div{
@@ -25,4 +29,11 @@ body div{
 }
 .div-form > label {
   margin-top: 20px;
+}
+a {
+  color: #00B7FF;
+}
+
+.white{
+  background-color: rgba(240, 255, 255, 0.507);
 }
